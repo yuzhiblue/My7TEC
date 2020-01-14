@@ -2,8 +2,6 @@
 <html class="no-js">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="/favicon.ico"/>
     <link rel="bookmark" href="/favicon.ico"/>
@@ -27,35 +25,22 @@
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body <?php if($_COOKIE['name'] == 'dmactived'){echo 'class="dmactived"';} ?>>
-<!--[if lt IE 8]>
-    <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
-<![endif]-->
+<body>
 <header id="header" class="header sticky">
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
-            <?php if ($this->options->logoUrl): ?>
-                <a id="logo" class="logo" href="<?php $this->options->siteUrl(); ?>">
-                    <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
-                </a>
-            <?php else: ?>
-                <a id="logo" class="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-            <?php endif; ?>
-
+                <a id="logo" class="logo" href="/">{{ site.title }}</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php $this->options->siteUrl(); ?>"><span><?php _e('首页'); ?></span></a>
+                        <a class="nav-link" href="/"><span>首页</span></a>
                     </li>
-                    <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-                    <?php while($pages->next()): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><span><?php $pages->title(); ?></span></a>
-                        </li>
-                    <?php endwhile; ?>  
+                            <a class="nav-link" href="#" title="<?php $pages->title(); ?>"><span><?php $pages->title(); ?></span></a>
+                        </li> 
                 </ul>
             </div>
         </nav>
