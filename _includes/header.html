@@ -1,10 +1,7 @@
 <!DOCTYPE HTML>
-<html class="no-js">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico"/>
-    <link rel="bookmark" href="/favicon.ico"/>
     <title>
       {% if page.title == "Home" %}
       {{ site.title }}{% if site.tagline %} &middot; {{ site.tagline }}{% endif %}
@@ -12,42 +9,15 @@
       {{ page.title }} &middot; {{ site.title }}
       {% endif %}
     </title>
-
-        <!-- 使用url函数转换相关路径 -->
-        <link rel="stylesheet" href="<?php $this->options->themeUrl('bootstrap/bootstrap.min.css'); ?>">
-        <link rel="stylesheet" href="<?php $this->options->themeUrl('awesome/css/font-awesome.min.css'); ?>">
-        <link rel="stylesheet" href="<?php $this->options->themeUrl('css/typo.css'); ?>">
-        <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
-        
-
-    <!--[if lt IE 9]>
-    <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
 </head>
 <body>
 <header id="header" class="header sticky">
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
                 <a id="logo" class="logo" href="/">{{ site.title }}</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/"><span>首页</span></a>
-                    </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" title="<?php $pages->title(); ?>"><span><?php $pages->title(); ?></span></a>
-                        </li> 
-                </ul>
-            </div>
         </nav>
     </div>
 </header>
-<div class="hideheader"></div>
-
 <div id="body" class="body">
     <div class="container">
         <div class="row">
