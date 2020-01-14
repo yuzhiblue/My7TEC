@@ -40,7 +40,6 @@
                 </a>
             <?php else: ?>
                 <a id="logo" class="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-                <!-- <p class="description"><?php $this->options->description() ?></p> -->
             <?php endif; ?>
 
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,16 +58,6 @@
                     <?php endwhile; ?>  
                 </ul>
             </div>
-            <i class="fa fa-sun-o darkmode" aria-hidden="true"></i>
-
-            <div class="site-search kit-hidden">
-                <form id="search" class="form-inline" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-                <label for="s" class="sr-only"><?php _e('搜一搜'); ?></label>
-                <input type="text" id="s" name="s" placeholder="<?php _e('搜一搜'); ?>" />
-                <button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>                               
-                </form>
-            </div>
-
         </nav>
     </div>
 </header>
