@@ -1,23 +1,42 @@
 <!DOCTYPE HTML>
+<html class="no-js">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>
-      {% if page.title == "Home" %}
-      {{ site.title }}{% if site.tagline %} &middot; {{ site.tagline }}{% endif %}
-      {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-      {% endif %}
-    </title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="bookmark" href="/favicon.ico"/>
+    <title>7TEC</title>
+
+        <!-- 使用url函数转换相关路径 -->
+        <link rel="stylesheet" href="/assets/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/font-awesome.min.css">
+        <link rel="stylesheet" href="/assets/typo.css">
+        <link rel="stylesheet" href="/assets/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- 通过自有函数输出HTML头部信息 -->
+<meta name="description" content="七年职场老鸟、销售精英、健身达人、电脑高手、青铜段位写手。个人公众号：7TEC，请指教！" />
+<meta name="keywords" content="typecho,7tec,职场" />
 </head>
-<body>
+<body >
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
 <header id="header" class="header sticky">
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
-                <a id="logo" class="logo" href="/">{{ site.title }}</a>
+                            <a id="logo" class="logo" href="/">7TEC</a>
+                <!-- <p class="description">七年职场老鸟、销售精英、健身达人、电脑高手、青铜段位写手。个人公众号：7TEC，请指教！</p> -->
+
         </nav>
     </div>
 </header>
+
 <div id="body" class="body">
     <div class="container">
         <div class="row">
