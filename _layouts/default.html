@@ -3,11 +3,18 @@
     <article class="Card typo indexCard paddingall" itemscope itemtype="http://schema.org/BlogPosting">
     <div class="post-box">
       <div class="post-title-box">
-  <h2 class="post-title" itemprop="name headline"><a itemprop="url" href="http://www.7tec.cn/312.html">关于知识与学习方法的一些思考</a><span></span></h2>
+  <h2 class="post-title" itemprop="name headline">{{ post.tile }}</h2>
   </div>
              <a itemprop="url" href="http://www.7tec.cn/312.html">
               <div class='post-thumb'> <img class='thumb' src='http://www.7tec.cn/usr/uploads/2020/01/129761432.jpeg' /></div>	            <div class="post-content" itemprop="articleBody">
-     <p>在写这篇文章的时候，我的心里只有一些碎片一样的观点，时而在我的脑海里闪现，时而又消失的无影无踪。明明我已经思考了很久，还是不知道该如何下笔。我本人就是一个很爱好学习的人，从小到大我对于一切未知的东西都很感兴趣。我练...</p>
+     <p>{% capture content %}
+    {% for post in site.posts %}
+        {{ post.content }}
+    {% endfor %}
+{% endcapture %}
+{{ content | toc_generator }}
+{{ content }}
+</p>
               </div>
              </a>
 </div>
