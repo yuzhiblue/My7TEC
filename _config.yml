@@ -4,15 +4,16 @@
 # 他们将会在模板里通过{{ site.我的变量 }}的方式生成。
 # Setup
 title: 7TEC
-tagline: The Jekyll Butler
 url: https://github.7tec.cn
 paginate: 1
 baseurl: ""
 permalink: pretty
 description: 我的GitHub网站。
 excerpt_separator: "<!-- excerpt -->"
-
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
+menu:
+  - name:首页
+    link:/
+  - name:存档
+    link:/archive.html
+  - name:关于我
+    link:about.html
