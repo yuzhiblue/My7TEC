@@ -34,18 +34,33 @@
                 <!-- <p class="description">七年职场老鸟、销售精英、健身达人、电脑高手、青铜段位写手。个人公众号：7TEC，请指教！</p> -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="http://www.7tec.cn/"><span>首页</span></a>
-                                    </li>
-                                                                                <li class="nav-item">
-                                            <a class="nav-link" href="http://www.7tec.cn/archive.html" title="存档"><span>存档</span></a>
-                                        </li>
-                                                            <li class="nav-item">
-                                            <a class="nav-link" href="http://www.7tec.cn/about.html" title="关于我"><span>关于我</span></a>
-                                        </li>
-
+                                  {% for item in site.menu %}
+				                            	<!-- If has submenues -->
+					                           	{% if item.submenu %}
+                                      <li class="dropdown">
+                                        <a class="dropdown-toggle"	data-toggle="dropdown" href="#">
+                                        {{item.name}}
+                                        <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                        {% for subitem in item.submenu %}
+                                          <li>
+                                          <a href="{{subitem.link}}">
+                                          {% if subitem.icon %}
+                                           <i class="fa fa-inverse fa-{{subitem.icon}} fa-2x"></i>
+                                          {% endif %}
+                                          {{subitem.name}}
+                                          </a>
+                                          </li>
+                                       {% endfor %}
+                                       </ul>
+                                     </li>
+                                      {% else %}
+						                           	<li class="nav-item"><a class="nav-link" href="{{item.link}}">{{item.name}}</a></li>
+				                          		{% endif %}
+				                          	{% endfor %}
                                 </ul>
-                            </div>
+                </div>
         </nav>
     </div>
 </header>
