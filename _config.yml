@@ -10,10 +10,3 @@ baseurl: ""
 permalink: pretty
 description: 我的GitHub网站。
 excerpt_separator: "<!-- excerpt -->"
-menu:
-  - name:首页
-    link:/
-  - name:存档
-    link:/archive.html
-  - name:关于我
-    link:/about.html
