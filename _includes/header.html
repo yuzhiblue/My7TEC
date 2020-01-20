@@ -45,7 +45,7 @@
                               <ul class="dropdown-menu">
                                   {% for subitem in site.item.submenu %}
                                   <li>
-                                     <a href="{{subitem.link}}">
+                                     <a href="{{site.subitem.link}}">
                                           {% if site.subitem.icon %}
                                            <i class="fa fa-inverse fa-{{subitem.icon}} fa-2x"></i>
                                           {% endif %}
@@ -56,7 +56,7 @@
                                </ul>
                                </li>
                      {% else %}
-			                  	<li class="nav-item"><a class="nav-link" href="{{item.link}}">{{site.item.name}}</a></li>
+			                  	<li class="nav-item"><a class="nav-link" href="{{site.item.link}}">{{site.item.name}}</a></li>
 				           		{% endif %}
 				             	{% endfor %}
                       </ul>
